@@ -1,0 +1,25 @@
+{
+  "name": "webpack-config-demo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@gh-lxynox:lxynox/webpack-config-demo.git",
+  "author": "lxynox <lxynox@gmail.com>",
+  "license": "MIT",
+  "script": {
+    "build": "webpack",
+    "dev": "webpack-dev-server"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0-rc.2",
+    "@babel/preset-env": "^7.0.0-rc.2",
+    "@babel/preset-react": "^7.0.0-rc.2",
+    "babel-loader": "next",
+    "webpack": "^4.17.0",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.1.5"
+  },
+  "dependencies": {
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2"
+  }
+}
