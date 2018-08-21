@@ -5,12 +5,13 @@
   "repository": "git@gh-lxynox:lxynox/webpack-config-demo.git",
   "author": "lxynox <lxynox@gmail.com>",
   "license": "MIT",
-  "script": {
-    "build": "webpack",
-    "dev": "webpack-dev-server"
+  "scripts": {
+    "build": "NODE_ENV=production webpack",
+    "start": "webpack-dev-server"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0-rc.2",
+    "@babel/plugin-proposal-class-properties": "^7.0.0-rc.2",
     "@babel/preset-env": "^7.0.0-rc.2",
     "@babel/preset-react": "^7.0.0-rc.2",
     "babel-loader": "next",

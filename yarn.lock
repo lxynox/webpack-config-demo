@@ -208,6 +208,17 @@
     "@babel/helper-remap-async-to-generator" "7.0.0-rc.2"
     "@babel/plugin-syntax-async-generators" "7.0.0-rc.2"
 
+"@babel/plugin-proposal-class-properties@^7.0.0-rc.2":
+  version "7.0.0-rc.2"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-proposal-class-properties/-/plugin-proposal-class-properties-7.0.0-rc.2.tgz#71f4f2297ec9c0848b57c231ef913bc83d49d85a"
+  dependencies:
+    "@babel/helper-function-name" "7.0.0-rc.2"
+    "@babel/helper-member-expression-to-functions" "7.0.0-rc.2"
+    "@babel/helper-optimise-call-expression" "7.0.0-rc.2"
+    "@babel/helper-plugin-utils" "7.0.0-rc.2"
+    "@babel/helper-replace-supers" "7.0.0-rc.2"
+    "@babel/plugin-syntax-class-properties" "7.0.0-rc.2"
+
 "@babel/plugin-proposal-json-strings@7.0.0-rc.2":
   version "7.0.0-rc.2"
   resolved "https://registry.yarnpkg.com/@babel/plugin-proposal-json-strings/-/plugin-proposal-json-strings-7.0.0-rc.2.tgz#ea4fd95eb00877e138e3e9f19969e66d9d47b3eb"
@@ -240,6 +251,12 @@
 "@babel/plugin-syntax-async-generators@7.0.0-rc.2":
   version "7.0.0-rc.2"
   resolved "https://registry.yarnpkg.com/@babel/plugin-syntax-async-generators/-/plugin-syntax-async-generators-7.0.0-rc.2.tgz#2d1726dd0b4d375e1c16fcb983ab4d89c0eeb2b3"
+  dependencies:
+    "@babel/helper-plugin-utils" "7.0.0-rc.2"
+
+"@babel/plugin-syntax-class-properties@7.0.0-rc.2":
+  version "7.0.0-rc.2"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-syntax-class-properties/-/plugin-syntax-class-properties-7.0.0-rc.2.tgz#3ecbb8ba2878f07fdc350f7b7bf4bb88d071e846"
   dependencies:
     "@babel/helper-plugin-utils" "7.0.0-rc.2"
 
