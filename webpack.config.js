@@ -1,12 +1,28 @@
 const webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 const useProd = config =>
   Object.assign({}, config, {
     mode: "production",
     output: {
       filename: "[name].[hash].js"
-    }
+    },
+    module: {
+      rules: [
+        ...config.module.rules,
+        {
+          test: /\.scss$/,
+          use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"]
+        }
+      ]
+    },
+    plugins: [
+      ...config.plugins,
+      new MiniCssExtractPlugin({
+        filename: "[name].[hash].css"
+      })
+    ]
   });
 
 const useDev = config =>
@@ -18,6 +34,15 @@ const useDev = config =>
       port: 3000,
       hot: true,
       open: true
+    },
+    module: {
+      rules: [
+        ...config.module.rules,
+        {
+          test: /\.scss$/,
+          use: ["style-loader", "css-loader", "sass-loader"]
+        }
+      ]
     },
     plugins: [...config.plugins, new webpack.HotModuleReplacementPlugin()]
   });

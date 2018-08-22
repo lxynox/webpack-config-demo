@@ -1,5 +1,7 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import Counter from './Counter'
+import React from "react";
+import ReactDOM from "react-dom";
+import Counter from "./Counter";
 
-ReactDOM.render(<Counter/>, document.getElementById('app'))
+import "./main.scss";
+
+ReactDOM.render(<Counter />, document.getElementById("app"));
