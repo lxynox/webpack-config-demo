@@ -57,8 +57,15 @@ const baseConfig = {
         exclude: /node_modules/
       },
       {
-        test: /\.(png|jpg|jpeg|gif)$/i,
-        use: ["file-loader"]
+        test: /\.(png|jpg|jpeg|gif|svg)$/i,
+        use: [
+          {
+            loader: "url-loader",
+            options: {
+              limit: 1000000
+            }
+          }
+        ]
       }
     ]
   },
