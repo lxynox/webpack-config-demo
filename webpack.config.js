@@ -1,41 +1,50 @@
-const webpack = require('webpack')
+const webpack = require("webpack");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
-const useProd = config => 
+const useProd = config =>
   Object.assign({}, config, {
-    mode: 'production',
-  })
+    mode: "production",
+    output: {
+      filename: "[name].[hash].js"
+    }
+  });
 
 const useDev = config =>
   Object.assign({}, config, {
-    mode: 'development',
-    devtool: 'cheap-module-eval-source-map',
+    mode: "development",
+    devtool: "cheap-module-eval-source-map",
     devServer: {
       historyApiFallback: true,
       port: 3000,
       hot: true,
       open: true
     },
-    plugins: [
-      new webpack.HotModuleReplacementPlugin()
-    ]
-  })
+    plugins: [...config.plugins, new webpack.HotModuleReplacementPlugin()]
+  });
 
 const baseConfig = {
-  mode: 'none',
+  mode: "none",
   module: {
-    rules: [{
-      test: /\.js|jsx$/,
-      use: 'babel-loader',
-      exclude: /node_modules/
-    }]
+    rules: [
+      {
+        test: /\.js|jsx$/,
+        use: "babel-loader",
+        exclude: /node_modules/
+      }
+    ]
   },
-  resolve : {
-    extensions : ['.js', '.jsx']
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: "./index.html"
+    })
+  ],
+  resolve: {
+    extensions: [".js", ".jsx"]
   }
-}
+};
 
-if (process.env.NODE_ENV === 'production') {
-  module.exports = useProd(baseConfig)
+if (process.env.NODE_ENV === "production") {
+  module.exports = useProd(baseConfig);
 } else {
-  module.exports = useDev(baseConfig)
+  module.exports = useDev(baseConfig);
 }
