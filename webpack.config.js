@@ -55,6 +55,10 @@ const baseConfig = {
         test: /\.js|jsx$/,
         use: "babel-loader",
         exclude: /node_modules/
+      },
+      {
+        test: /\.(png|jpg|jpeg|gif)$/i,
+        use: ["file-loader"]
       }
     ]
   },

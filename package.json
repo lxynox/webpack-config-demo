@@ -16,6 +16,7 @@
     "@babel/preset-react": "^7.0.0-rc.2",
     "babel-loader": "next",
     "css-loader": "^1.0.0",
+    "file-loader": "^2.0.0",
     "html-webpack-plugin": "^3.2.0",
     "mini-css-extract-plugin": "^0.4.2",
     "node-sass": "^4.9.3",
