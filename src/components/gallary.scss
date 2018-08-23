@@ -1,0 +1,54 @@
+$breakpoint-mobile: 767px;
+$breakpoint-desktop: 1024px;
+
+.gallary-slides {
+  display: flex;
+  cursor: pointer;
+  overflow: hidden;
+  background: dimgray;
+
+  img {
+    width: 15rem;
+  }
+}
+
+.gallary-controls {
+  display: flex;
+  justify-content: space-between;
+
+  button {
+    flex: 1 0 30%;
+    line-height: 3em;
+    border: none;
+    background: lightsteelblue;
+    cursor: pointer;
+    &:first-child {
+      margin-right: 1rem;
+    }
+    &:last-child {
+      margin-left: 1rem;
+    }
+    &:disabled {
+      background: dimgray;
+      pointer-events: none;
+    }
+  }
+}
+
+@media (max-width: $breakpoint-mobile) {
+  .gallary-slides {
+    width: 15rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .gallary-slides {
+    width: 30rem;
+  }
+}
+
+@media (min-width: $breakpoint-desktop) {
+  .gallary-slides {
+    width: 45rem;
+  }
+}

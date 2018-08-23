@@ -2,8 +2,35 @@ $font-stack:    Helvetica, sans-serif;
 $primary-color: rgb(166, 86, 212);
 $background-color: whitesmoke;
 
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 body {
   font: 100% $font-stack;
   color: $primary-color;
-  background: $background-color;
+  background: url('./bg.gif') no-repeat bottom $background-color;
+  margin: 0;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 1023px) {
+  body {
+    background: $background-color;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding-top: 5rem;
+    align-items: flex-start;
+  }
 }
