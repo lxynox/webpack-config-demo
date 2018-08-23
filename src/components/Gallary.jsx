@@ -2,7 +2,6 @@ import React from "react";
 import { string, shape, arrayOf, object } from "prop-types";
 import throttle from "lodash/throttle";
 import "./gallary.scss";
-import { runInThisContext } from "vm";
 
 class Gallary extends React.Component {
   state = {

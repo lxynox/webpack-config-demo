@@ -10,3 +10,14 @@ A react gallary(carousel) component built from an example webpack configuration.
 ### Build
 - *development*: `yarn start`
 - *production*: `yarn build`
+
+### Deployment
+
+```sh
+npm i -g surge
+rm -fr dist
+yarn build
+surge dist
+```
+
+An example deployed demo: https://unbiased-floor.surge.sh
